@@ -1,18 +1,27 @@
-## Getting Started
+## Description of the task
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Create an application that identifies the pair of employees who have worked together on common projects for the longest period of time.
 
-## Folder Structure
+Input data:
 
-The workspace contains two folders by default, where:
+ A CSV file with data in the following format:
+ 
+ EmpID, ProjectID, DateFrom, DateTo
+ 
+Sample data:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+143, 12, 2013-11-01, 2014-01-05
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+218, 10, 2012-05-16, NULL
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+143, 10, 2009-01-01, 2011-04-27
 
-## Dependency Management
+...
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Sample output:
+
+ 143, 218, 8
+ 
+Specific requirements
+1) DateTo can be NULL, equivalent to today
+2) The input data must be loaded to the program from a CSV file
